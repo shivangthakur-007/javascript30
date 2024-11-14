@@ -62,11 +62,13 @@
 }
 
 ul li {
+  /* display: flex;
+  align-items: center; */
   list-style: none;
   padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 21px;
   position: relative;
 }
 
@@ -78,8 +80,7 @@ ul li::before {
   border-radius: 50%;
   background-image: url("./assets/unchecked.png");
   background-size: cover;
-  text-align: center;
-  top: 12px;
+  top: 9px;
   left: 8px;
 }
 
