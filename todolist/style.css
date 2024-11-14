@@ -75,9 +75,35 @@ ul li::before {
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background-image: url();
+  background-image: url("./assets/unchecked.png");
   background-size: cover;
+  text-align: center;
   top: 12px;
   left: 8px;
-  ;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url("./assets/checked.png");
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: #edeef0;
 }
