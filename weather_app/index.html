@@ -9,8 +9,16 @@
   <body>
     <div class="card">
       <div class="search">
-        <input type="text" placeholder="enter city name" name="city" spellcheck="false" />
+        <input
+          type="text"
+          placeholder="enter city name"
+          name="city"
+          spellcheck="false"
+        />
         <button><img src="assets/search.png" alt="search" /></button>
+      </div>
+      <div class="error">
+        <p>Invalid City Name</p>
       </div>
       <div class="weather">
         <img src="assets/rain.jpg" class="weather-icon" alt="weather-icon" />
@@ -18,14 +26,14 @@
         <h2 class="city">New York</h2>
         <div class="details">
           <div class="col">
-            <img src="assets/humidity.png" alt="humidity" />
+            <img class="google" src="assets/humidity.png" alt="humidity" />
             <div>
               <p class="humidity">50%</p>
               <p>Humidity</p>
             </div>
           </div>
           <div class="col">
-            <img src="assets/wind.jpg" alt="" />
+            <img class="google" src="assets/wind.png" alt="wind" />
             <p class="wind">15 Km/h</p>
             <p>Wind Speed</p>
           </div>
@@ -35,32 +43,52 @@
     <script>
       const searchBox = document.querySelector(".search input");
       const searchBtn = document.querySelector(".search button");
+      const changeimg = document.querySelector(".weather-icon");
 
       async function checkweather(city) {
         const response = await fetch("db.json");
         const data = await response.json();
 
         let found = false;
+        document.querySelector(".error p").style.display = "none";
+
         data.forEach((cityData) => {
           if (city.toLowerCase() === cityData.name.toLowerCase()) {
+            if (cityData.weathercondition === "clear") {
+              changeimg.src = "assets/brightsun.png";
+            } else if (cityData.weathercondition === "mist") {
+              changeimg.src = "assets/mist.jpg";
+            } else if (cityData.weathercondition === "cloud") {
+              changeimg.src = "assets/cloud.jpg";
+            } else if (cityData.weathercondition === "drizzle") {
+              changeimg.src = "assets/drizzle.jpg";
+            } else if (cityData.weathercondition === "rain") {
+              changeimg.src = "assets/rain.jpg";
+            } else {
+              changeimg.src = "assets/brightsun.jpg";
+            }
             document.querySelector(".city").innerHTML = cityData.name;
             document.querySelector(".temp").innerHTML =
               Math.round(cityData.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML =
               cityData.main.humidity + "%";
             document.querySelector(".wind").innerHTML =
-              cityData.wind.speed + " Km/h";
+              cityData.wind.speed + "Km/h";
+            document.querySelector(".weather").style.display = "block";
+            document.querySelector(".error p").style.display = "none";
             found = true;
           }
         });
 
         if (!found) {
-          alert("This city is not added yet!");
+          document.querySelector(".error p").style.display = "block";
+          document.querySelector(".weather").style.display = "none";
         }
       }
 
       searchBtn.addEventListener("click", () => {
         checkweather(searchBox.value); // Pass value from the search box
+        searchBox.value = "";
       });
     </script>
   </body>
