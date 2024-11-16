@@ -35,10 +35,19 @@ const questions = [
       { text: "Africa", correct: false },
     ],
   },
+  {
+    question: "Which is the fastest animal in the world?",
+    answers: [
+      { text: "Cheetah", correct: false },
+      { text: "Jaguar", correct: true },
+      { text: "turtle", correct: false },
+      { text: "Hare", correct: false },
+    ],
+  },
 ];
 
 const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
+const answerButtons = document.getElementById("answer-button");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
