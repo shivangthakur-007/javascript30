@@ -30,7 +30,7 @@
   width: 25px;
 }
 
-.container buttton {
+.container button{
   display: flex;
   align-items: center;
   background: linear-gradient(#9418fd, #571094);
@@ -58,6 +58,7 @@
 }
 
 .input-box img {
+  filter: invert(0.7);
   width: 25px;
   position: absolute;
   bottom: 15px;

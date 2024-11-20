@@ -17,13 +17,13 @@ createBtn.addEventListener("click", () => {
   let img = document.createElement("img");
   inputBox.className = "input-box";
   inputBox.setAttribute("contenteditable", "true");
-  img.src - "assets/delete.png";
+  img.src = "assets/delete.png";
   notesContainer.appendChild(inputBox).appendChild(img);
 });
 
 notesContainer.addEventListener("click", function (e) {
   if (e.target.tagName === "IMG") {
-    e.target.parentelement.remove();
+    e.target.parentElement.remove();
     updateStorage();
   } else if (e.target.tagName === "P") {
     notes = document.querySelectorAll(".input-box");
@@ -32,7 +32,7 @@ notesContainer.addEventListener("click", function (e) {
         updateStorage();
       };
     });
-  }
+  } 
 });
 
 document.addEventListener("keydown", (event) => {
