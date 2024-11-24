@@ -59,9 +59,10 @@ body {
   }
 }
 
-.toast i {
+.toast img {
   margin: 0 20px;
-  font-size: 35px;
+  /* font-size: 32px; */
+  width: 30px;
   color: green;
 }
 
@@ -87,7 +88,7 @@ body {
 .toast.error::after {
   background-color: red;
 }
-.toast.toast.invalid::after {
+.toast.Invalid::after {
   background-color: orange;
 }
 
