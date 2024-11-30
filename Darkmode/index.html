@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0a0635d0f0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="dark_theme_icon/1.png" alt="logo" class="logo" />
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">PORTFOLIO</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">HIRE ME</a></li>
+        </ul>
+        <img src="dark_theme_icon/moon.png" alt="moon" id="icon" />
+      </nav>
+
+      <div class="info">
+        <h1>I'm <span>Adarsh </span>Singh</h1>
+        <p>
+          This is my official portfolio website to showcase my all works related
+          to web<br />
+          development and UI design.
+        </p>
+        <a href="">Download CV</a>
+      </div>
+      <div class="img-box">
+        <img
+          src="dark_theme_icon/avatar.jpg"
+          alt="pattern_image"
+          class="back-img"
+        />
+        <img
+          src="dark_theme_icon/Snapchat-95776787.jpg"
+          alt="main_img"
+          class="main-img"
+        />
+      </div>
+      <div class="social-links">
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-behance"></i></a>
+        <a href=""><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <script>
+      let icon = document.getElementById("icon");
+      let logo = document.querySelector(".logo");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "dark_theme_icon/sun.png";
+          if (logo) {
+            logo.src = "dark_theme_icon/2.png";
+            logo.classList.add("logomaker");
+          }
+        } else {
+          icon.src = "dark_theme_icon/moon.png";
+          if (logo) {
+            logo.src = "dark_theme_icon/1.png";
+            logo.classList.remove("logomaker");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
