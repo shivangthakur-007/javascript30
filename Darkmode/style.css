@@ -22,12 +22,12 @@
 
 .logomaker {
   width: 150px; /* Example size */
-  height: auto; /* Maintain aspect ratio */
-  filter: brightness(0.8); /* Slightly darken */
   border: 2px solid #edf2fc; /* Add a border */
   border-radius: 50%; /* Make it circular if it's a square image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
   transition: all 0.3s ease-in-out; /* Smooth transition for effects */
+  height: auto; /* Maintain aspect ratio */
+  filter: brightness(0.8); /* Slightly darken */
 }
 
 nav ul {
