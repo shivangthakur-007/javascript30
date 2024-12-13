@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Design</title>
+    <title>Product Design 👕</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,94 +19,93 @@
             <span class="btn"></span>
             <span class="btn"></span>
             <span class="btn"></span>
+          </div>
         </div>
-    </div>
-    <div class="details">
-        <h1>Casual T Shirt</h1>
-        <h2>$15.00</h2>
-        <h3>30% OFF</h3>
-        <p>
+        <div class="details">
+          <h1>Casual T Shirt</h1>
+          <h2>$15.00</h2>
+          <h3>30% OFF</h3>
+          <p>
             Wrangler is an american manufacturer of jeans and other clothing
             items, particularly workwear.
-        </p>
-        <form>
+          </p>
+          <form>
             <div class="size-select">
-                <p>Size</p>
-                <label
+              <p>Size</p>
+              <label
                 ><input type="radio" name="size" id="small" />
                 <span>S</span></label
-                >
-                <label
+              >
+              <label
                 ><input type="radio" name="size" id="medium" />
                 <span>M</span></label
-                >
-                <label
+              >
+              <label
                 ><input type="radio" name="size" id="large" />
                 <span>L</span></label
-            >
-            <label
-            ><input type="radio" name="size" id="x-large" />
-            <span>XL</span></label
-            >
-            <label
-            ><input type="radio" name="size" id="xx-large" />
-            <span>XXL</span></label
-            >
+              >
+              <label
+                ><input type="radio" name="size" id="x-large" />
+                <span>XL</span></label
+              >
+              <label
+                ><input type="radio" name="size" id="xx-large" />
+                <span>XXL</span></label
+              >
+            </div>
+            <div class="color-select">
+              <p>Color</p>
+              <label
+                ><input type="radio" name="color" id="red" />
+                <span class="color-1"></span>
+              </label>
+              <label
+                ><input type="radio" name="color" id="green" />
+                <span class="color-2"></span>
+              </label>
+              <label
+                ><input type="radio" name="color" id="blue" />
+                <span class="color-3"></span>
+              </label>
+              <label
+                ><input type="radio" name="color" id="pink" />
+                <span class="color-4"></span>
+              </label>
+            </div>
+            <div class="quantity-select">
+              <p>Quantity</p>
+              <input type="number" value="1" />
+            </div>
+            <button>Buy Now</button>
+          </form>
         </div>
-        <div class="color-select">
-            <p>Color</p>
-            <label
-            ><input type="radio" name="color" id="red" />
-            <span class="color-1"></span>
-        </label>
-        <label
-              ><input type="radio" name="color" id="green" />
-              <span class="color-2"></span>
-            </label>
-            <label
-            ><input type="radio" name="color" id="blue" />
-            <span class="color-3"></span>
-        </label>
-        <label
-        ><input type="radio" name="color" id="pink" />
-        <span class="color-4"></span>
-    </label>
-</div>
-<div class="quantity-select">
-    <p>Quantity</p>
-    <input type="number" value="1" />
-</div>
-<button>Buy Now</button>
-</form>
-</div>
-</div>
-</div>
-<script>
-    let productImg = document.getElementById("productImg");
-    let btn = document.getElementsByClassName("btn");
-    
-    btn[0].onclick = function () {
+      </div>
+    </div>
+    <script>
+      let productImg = document.getElementById("productImg");
+      let btn = document.getElementsByClassName("btn");
+
+      btn[0].onclick = function () {
         productImg.src = "product-img/image1.png";
         for (bt of btn) {
-            bt.classList.remove("active");
+          bt.classList.remove("active");
         }
         this.classList.add("active");
-    };
-    btn[1].onclick = function () {
+      };
+      btn[1].onclick = function () {
         productImg.src = "product-img/image2.png";
         for (bt of btn) {
-            bt.classList.remove("active");
+          bt.classList.remove("active");
         }
         this.classList.add("active");
       };
       btn[2].onclick = function () {
-          productImg.src = "product-img/image3.png";
-          for (bt of btn) {
-              bt.classList.remove("active");
-            }
-            this.classList.add("active");
-        };
-        </script>
+        productImg.src = "product-img/image3.png";
+        for (bt of btn) {
+          bt.classList.remove("active");
+        }
+        this.classList.add("active");
+      };
+     </script>
   </body>
-  </html>
-  
+</html>
