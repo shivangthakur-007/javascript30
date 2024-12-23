@@ -8,7 +8,9 @@ const firebaseapp = firebase.initializeApp({
   measurementId: "G-J57TH4HQD8",
 });
 
+const db = firebaseapp.firestore();
 const auth = firebaseapp.auth();
+
 const showToast = (message, isError = false) => {
   const toast = document.getElementById("toast");
   toast.textContent = message;
@@ -62,4 +64,29 @@ const login = () => {
       showToast("Login successful!");
     })
     .catch((err) => showToast(err.message, true));
+};
+
+
+const updateData = () => {
+  db.collection("users")
+    .doc("xTFP83uUHVRUPG6NWAAf")
+    .update({
+      email: "ashishisagoodboy1234@gmail.com",
+      password: "123456",
+    })
+    .then(() => {
+      alert("Data Updated");
+    });
+};
+
+const deleteData = () => {
+  db.collection("users")
+    .doc("xTFP83uUHVRUPG6NWAAf")
+    .delete()
+    .then(() => {
+      alert("Data Deleted");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };

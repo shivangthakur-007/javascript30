@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses</title>
-</head>
-<body>
-    hello
-</body>
+    <link rel="stylesheet" href="./courses/courses.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="course-heading">Courses</h1>
+      <div class="course-main">
+        <input type="text" id="course" placeholder="Course Name" />
+        <textarea
+          type="text"
+          id="description"
+          rows="6"
+          placeholder="Course Description"
+        ></textarea>
+        <div class="course-btns">
+          <div>
+            <button class="course-btn" onclick="saveData(event)">ADD COURSES</button>
+            <button class="course-btn" onclick="readData()">YOUR COURSES</button>
+          </div>
+        </div>
+      </div>
+      <span>
+        Want to change in Your Courses?
+        <a class="a-link" href="./UpCourses.html">UPDATE COURSE</a>
+      </span>
+      <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="./courses/course.js" defer></script>
+  </body>
 </html>

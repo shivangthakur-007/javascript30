@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="./updatecourse.css">
+</head>
+<body>
+    <div class="container">
+      <h1 class="course-heading">Courses</h1>
+      <div class="course-main">
+        <input type="text" id="course-id" placeholder="Place Your Id" />
+        <input type="text" id="course" placeholder="Course Name" />
+        <textarea
+          type="text"
+          id="description"
+          rows="6"
+          placeholder="Course Description"
+        ></textarea>
+        <div class="course-btns">
+            <div>
+                <button class="course-btn update" onclick="updateData()">UPDATE COURSE</button>
+            </div>
+        </div>
+    </div>
+        <span>Go to <a class="a-link" href="./index.html">Home</a></span>
+        <div id="toast" class="toast"></div>
+        <!-- <div>
+          <button class="course-btn">Update Courses</button>
+          <button class="course-btn">Delete Courses</button>
+        </div> -->
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+
+    <script src="./Update.course.js"></script>
+  </body>
+</html>
+</html>

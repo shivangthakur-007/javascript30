@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6200ea, #3700b3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  background-color: #fff;
+  width: 100vw;
+  max-width: 400px;
+  /* border: 1px solid black; */
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+
+}
+
+.course-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-heading {
+  color: #6200ea;
+}
+
+#course {
+  width: 100%;
+  min-width: 270px;
+  padding: 5px 5px;
+  margin: 8px 0;
+}
+#course-id {
+  width: 100%;
+  min-width: 270px;
+  padding: 5px 5px;
+  margin: 8px 0;
+}
+
+#description {
+  margin: 8px 0;
+  padding: 5px 5px;
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+.toast.error {
+  background: #f44336;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+.course-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.course-btn {
+  background-color: #3700b3;
+  color: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 90px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.course-btn:active {
+  border: 1px solid black;
+}
+
+.a-link{
+    margin: 8px 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+span{
+    margin: 8px 0;
+}
+
+.course-list{
+  width: 100%;
+  max-width: 190px;
+  list-style: none;
+  position: absolute;
+  left: 75%;
+  background-color: white;
+  color: #6200ea;
+}
+
+.update{
+  width: 100%;
+  max-width: 170px;
+}

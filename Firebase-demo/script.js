@@ -45,7 +45,7 @@ const login = () => {
       console.log(err.message);
     });
 };
-
+  
 const saveData = () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
