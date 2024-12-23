@@ -11,10 +11,13 @@ const firebaseapp = firebase.initializeApp({
 const db = firebaseapp.firestore();
 const auth = firebaseapp.auth();
 
+
 // Register Function
 const register = () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+
+  // console.log('email', email, password) 
   auth
     .createUserWithEmailAndPassword(email, password)
     .then((res) => {
@@ -25,6 +28,7 @@ const register = () => {
       console.log(err.statuscode);
       console.log(err.message);
     });
+  
 };
 
 const login = () => {

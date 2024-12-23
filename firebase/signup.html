@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Auth</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="toast" class="toast"></div>
+      <div id="user-info" class="user-info"></div>
+      <div id="auth-form" class="auth-form">
+        <!-- Sign Up Form -->
+        <div id="signup-form">
+          <h2>Sign Up</h2>
+          <label>Email</label>
+          <input
+            id="signup-email"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <label>Password</label>
+          <input
+            id="signup-password"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <label>Confirm Password</label>
+          <input
+            id="signup-confirm-password"
+            type="password"
+            placeholder="Confirm your password"
+          />
+          <button class="auth-btn" onclick="register()">Sign Up</button>
+          <p style="text-align: center">
+            Already have an account?
+            <span onclick="showLogin()">Login here</span>
+          </p>
+          <p style="text-align: center">
+            Back to Home
+            <a href="index.html"> <span> Click Here </span></a>
+          </p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" style="display: none">
+          <h2>Login</h2>
+          <label>Email</label>
+          <input id="login-email" type="email" placeholder="Enter your email" />
+          <label>Password</label>
+          <input
+            id="login-password"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <button class="auth-btn" onclick="login()">Login</button>
+          <p style="text-align: center">
+            Don't have an account?
+            <span onclick="showSignup()">Sign up here</span>
+          </p>
+          <p style="text-align: center">
+            Back to Home
+            <a href="index.html"> <span> Click Here</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

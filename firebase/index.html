@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="homepage-container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="menu-container">
+          <div class="hamburger-icon" onclick="toggleDropdown()">☰</div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <ul>
+              <li onclick="handleMenuClick('courses')">Courses</li>
+              <li onclick="handleMenuClick('contact')">Contact Us</li>
+              <li onclick="handleMenuClick('about')">About Us</li>
+            </ul>
+          </div>
+        </div>
+        <button class="signup-btn" onclick="redirectToSignup()">Sign Up</button>
+      </header>
+
+      <!-- Main Content Section -->
+      <main class="main-content">
+        <h1>Welcome to Our Service</h1>
+        <p>
+          Manage your data with ease. Use the options in the menu to add,
+          remove, update, or delete your information.
+        </p>
+      </main>
+    </div>
+
+    <script>
+      // Toggle Dropdown
+      function toggleDropdown() {
+        const menu = document.getElementById("dropdown-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Redirect to Signup
+      function redirectToSignup() {
+        window.location.href = "signup.html"; // Replace with the actual URL of your signup page
+      }
+
+      // Handle Menu Click
+      function handleMenuClick(action) {
+        const url = `${action}.html`;
+        console.log("Redirecting to:", url);
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
