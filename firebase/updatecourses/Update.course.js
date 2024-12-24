@@ -59,3 +59,41 @@ const updateData = () => {
       showToast("Error checking document: " + err.message, true);
     });
 };
+const deleteData = () => {
+  const courseId = document.getElementById("course-id").value;
+  // const coursename = document.getElementById("course").value.trim();
+  // const coursedescription = document.getElementById("description").value.trim();
+
+  if (!courseId) {
+    showToast("All fields are required.", true);
+    return;
+  }
+
+  // Check if document exists before updating
+  db.collection("courses")
+    .doc(courseId)
+    .get()
+    .then((doc) => {
+      if (!doc.exists) {
+        showToast("Course ID not found.", true);
+        return;
+      }
+
+      // Proceed to update if document exists
+      db.collection("courses")
+        .doc(courseId)
+        .delete()
+        .then(() => {
+          alert("Data Deleted Successfully");
+          showToast("Data Deleted successfully!", false);
+        })
+        .catch((err) => {
+          console.error("Error Deleting document: ", err);
+          showToast("Error Deleting data: " + err.message, true);
+        });
+    })
+    .catch((err) => {
+      console.error("Error delete document: ", err);
+      showToast("Error delete document: " + err.message, true);
+    });
+};
