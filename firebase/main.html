@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firestore Data Filter</title>
+    <link rel="stylesheet" href="FilterDatabase/Filter.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Filter Your Courses</h1>
+
+      <div class="filter-section">
+        <label for="search">Search:</label>
+        <input type="text" id="search" placeholder="Search by name..." />
+
+        <button id="filterBtn">Filter</button>
+      </div>
+
+      <div id="data-list"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="./FilterDatabase/filter.js" defer></script>
+  </body>
+</html>
