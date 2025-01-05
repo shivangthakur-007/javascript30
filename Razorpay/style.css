@@ -2,46 +2,89 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
 }
 
+body {
+  background-color: white;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
 .container {
-  height: 100vh;
+  /* height: 100vh; */
+  box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: fixed;
+  width: 100vw;
 }
 
-.header{
-    display: flex;
-    padding: 10px 35px;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  display: flex;
+  padding: 10px 5%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header-left{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.header-img{
-    padding: 5px 0px;
+.header-img {
+  padding: 5px 0px;
 }
 
-.header-img img{
-    max-width: 250px;
+.header-img img {
+  max-width: 250px;
 }
 
-.header-ul{
-    display: flex;
-    list-style: none;
-    gap: 10px;
-
+.header-ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
 }
 
-.header-ul a{
-    color: black;
-    text-decoration: none;
+.header-ul a {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
 }
-.header-ul a:hover{
-    color: blue;
-    text-decoration: underline;
+.header-ul a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.login-btn {
+  font-size: 16px;
+  color: blue;
+  border: 1px solid blue;
+  padding: 3px 12px;
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+}
+.sign-btn {
+  font-size: 16px;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.main{
+    /* height: 100vh; */
+    /* position: absolute; */
 }
